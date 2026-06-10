@@ -150,7 +150,7 @@ async function UpdateScript(auth, script) {
   const key = params.get("auth");
   if (!key || !scriptId) return;
   try {
-    const res = await fetch(`https://encrypt-x.scriptobfuscator2.workers.dev/edit?Id=${scriptId}&auth=${key}`, {
+    const res = await fetch(`https://luarmined-api.zinniakillua.workers.dev/edit?Id=${scriptId}&auth=${key}`, {
       method: "PUT",
       headers: {"Content-Type":"application/json"},
       body: JSON.stringify({
@@ -179,7 +179,7 @@ async function UpdateScript(auth, script) {
     if (json && !json.auth) {
       window.location.replace(`https://luarmined.pages.dev/Scripts?Id=${currentId}`);
     }
-    const res = await fetch(`https://encrypt-x.scriptobfuscator2.workers.dev/check?Id=${currentId}&auth=${key}`);
+    const res = await fetch(`https://luarmined-api.zinniakillua.workers.dev/check?Id=${currentId}&auth=${key}`);
     const json2 = await res.json();
     if (json2.correct === true) {
       document.getElementById("keyInput").value = json2.auth;
