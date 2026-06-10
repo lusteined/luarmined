@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Encrypt X Editor</title>
+<title>Editor</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
@@ -11,7 +11,7 @@
     min-height: 100vh;
     background:
       radial-gradient(circle at center, rgba(0,0,0,0.75) 0%, rgba(2,6,23,0.95) 100%),
-      url("https://raw.githubusercontent.com/ScriptObfuscator2/Website/refs/heads/main/Dark%20Theme%20With%20Light%20Bulb.jpeg");
+      url("https://motionbgs.com/i/c/364x205/media/9079/silver-surfer-black-silence.3840x2160.jpg");
     background-size: cover;
     background-position: center;
     font-family: "Courier New", monospace;
@@ -29,7 +29,6 @@
     padding: 15px;
   }
 
-  /* 🔥 TOP BAR */
   .topbar {
     display: flex;
     justify-content: space-between;
@@ -178,7 +177,7 @@ async function UpdateScript(auth, script) {
     const json = await GetScriptData(currentId);
     // Detect if Id is not accessable
     if (json && !json.auth) {
-      window.location.replace(`https://encrypt-x.pages.dev/Scripts?Id=${currentId}`);
+      window.location.replace(`https://luarmined.pages.dev/Scripts?Id=${currentId}`);
     }
     const res = await fetch(`https://encrypt-x.scriptobfuscator2.workers.dev/check?Id=${currentId}&auth=${key}`);
     const json2 = await res.json();
